@@ -68,12 +68,15 @@ int main(int argc, const char * argv[]) {
 
   printf("---------------------------\n");
   
-  // Get Values
+  // Change the original value and Get Values of the CFNumber objects
   printf("Get Values:...\n");
+  
+  ui = 8;
   unsigned int uiValue;
   CFNumberGetValue(uiNumberRef, kCFNumberLongType, (void *)&uiValue);
   printf("ui value retrieved = %i\n", uiValue); // prints "5" for the value
   
+  f = 15.3;
   float fValue;
   CFNumberGetValue(fNumberRef, kCFNumberFloatType, (void *)&fValue);
   printf("f value retrieved = %.2f\n", fValue); // prints "8.20" for the value
